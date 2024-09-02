@@ -72,9 +72,9 @@ def gerar_enderecos_por_renda(renda_lista):
     }
     for renda in renda_lista:
         if renda <= 30_000.:
-            pesos = [0.6, 0.3, 0.1]
+            pesos = [0.6, 0.37, 0.03]
         elif renda <= 300_000.:
-            pesos = [0.2, 0.6, 0.2]
+            pesos = [0.2, 0.7, 0.1]
         else:
             pesos = [0.05, 0.25, 0.7]
         categoria_sorteada = random.choices(["baixa", "média", "alta"], pesos, k=1)[0]
@@ -178,7 +178,7 @@ def salvar_banco_dados(dados):
     cur.execute('''CREATE TABLE REGISTRO_IMOVEIS (
         CPF TEXT PRIMARY KEY,
         RUA TEXT,
-        END_NUMERO TEXT,
+        END_NUMERO INTEGER,
         BAIRRO TEXT,
         CIDADE TEXT,
         ESTADO TEXT,
