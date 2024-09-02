@@ -36,9 +36,9 @@ def gerar_pessoas_em_lote(lote):
 
 
 def gerar_renda_anual_em_lote(lote):
-    ranges = [(0, 5000), (5000, 10000), (10000, 40000), (40000, 100000), (100000, 200000), (200000, 500000),
-              (500000, 1000000)]
-    probabilities = [0.05, 0.15, 0.50, 0.13, 0.10, 0.05, 0.02]
+    ranges = [(1200, 5000), (5000, 10000), (10000, 40000), (40000, 100000), (100000, 200000), (200000, 500000),
+              (500000, 2000000)]
+    probabilities = [0.05, 0.15, 0.25, 0.25, 0.20, 0.09, 0.01]
 
     # Gerando escolhas aleatórias ponderadas para os intervalos
     counts = np.random.multinomial(lote, probabilities)
